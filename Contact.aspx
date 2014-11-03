@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Default.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Contact.aspx.vb" Inherits="Contact" %>
 
 <!DOCTYPE html>
 
@@ -18,18 +18,6 @@
             <a href="Contact.aspx" style="color: #FFFFFF">Contact</a></h2>
         
     
-    </div>
-    <div class="center">
-
-        <asp:SqlDataSource ID="sqlHome" runat="server" ConnectionString="<%$ ConnectionStrings:db_golfers %>" SelectCommand="SELECT [golferID], [firstName], [lastName] FROM [arimyers_hw07]"></asp:SqlDataSource>
-        <asp:GridView ID="gvMain" runat="server" AutoGenerateColumns="False" DataSourceID="sqlHome">
-            <Columns>
-                <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" />
-                <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" />
-                <asp:HyperLinkField DataNavigateUrlFields="golferID" DataNavigateUrlFormatString="Golfer.aspx?golferID={0}" Text="Select" />
-            </Columns>
-        </asp:GridView>
-
     </div>
     </form>
 </body>
