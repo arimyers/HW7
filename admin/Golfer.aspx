@@ -60,9 +60,12 @@
                 <asp:BoundField DataField="country" HeaderText="Country" SortExpression="country" />
                 <asp:BoundField DataField="debut" HeaderText="Debut" SortExpression="debut" />
                 <asp:BoundField DataField="swings" HeaderText="Swings" SortExpression="swings" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Fields>
             <FooterStyle BackColor="Black" />
         </asp:DetailsView>
+
+        <asp:Label ID="lblDel" runat="server" Text="Label"></asp:Label>
 
     </div>
     </form>
