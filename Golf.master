@@ -16,12 +16,16 @@
         <div class="header">
         
             <h1 style="color: #FFFFFF; font-family: 'Eras Bold ITC'; text-decoration: underline;">Aric&#39;s Golfer Info</h1>
-            <h3 style="color: #FFFFFF">The one stop shop for basic golfer knowledge!</h3>
-            <h2 style="color: #FFFFFF"><a href="Default.aspx" style="color: #FFFFFF">Home</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
-                <a href="AddGolfer.aspx" style="color: #FFFFFF">Add Golfer</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
-                <a href="AboutUs.aspx" style="color: #FFFFFF">About Us</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
-                <a href="Contact.aspx" style="color: #FFFFFF">Contact</a></h2>
-        
+            <asp:Image ID="logo" runat="server" Height="70px" ImageUrl="~/pictures/golfball.jpg" />
+            <h5 style="color: #FFFFFF">The one stop shop for basic golfer knowledge!</h5>
+            <h4 style="color: #FFFFFF">
+                <asp:HyperLink ID="link_home" runat="server" ForeColor="White" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+                 
+                <asp:HyperLink ID="link_AboutUs" runat="server" ForeColor="White" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
+                <asp:HyperLink ID="link_Contact" runat="server" ForeColor="White" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>&nbsp;&nbsp; |&nbsp;
+                <asp:HyperLink ID="link_Admin" runat="server" ForeColor="White" NavigateUrl="~/login/login.aspx">Admin</asp:HyperLink>&nbsp; |&nbsp;
+                <asp:LoginStatus ID="LoginStatus1" runat="server" ForeColor="White" />
+            </h4>
     
         </div>
         <div>

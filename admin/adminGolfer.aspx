@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Golf.master" AutoEventWireup="false" CodeFile="Golfer.aspx.vb" Inherits="Golfer" %>
+﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Golf.master" AutoEventWireup="false" CodeFile="adminGolfer.aspx.vb" Inherits="Golfer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     Golfer
@@ -43,9 +43,11 @@
                 <asp:BoundField DataField="country" HeaderText="Country" SortExpression="country" />
                 <asp:BoundField DataField="debut" HeaderText="Debut" SortExpression="debut" />
                 <asp:BoundField DataField="swings" HeaderText="Swings" SortExpression="swings" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True">
+                <ControlStyle ForeColor="White" />
+                </asp:CommandField>
             </Fields>
             <FooterStyle BackColor="Black" />
         </asp:DetailsView>
-<asp:Label ID="lblDel" runat="server" ForeColor="Red"></asp:Label>
 </asp:Content>
 
