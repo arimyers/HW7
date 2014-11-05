@@ -1,10 +1,27 @@
-﻿<%@ Page Title="" Language="VB" MasterPageFile="~/Golf.master" AutoEventWireup="false" CodeFile="Golfer.aspx.vb" Inherits="Golfer" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="xGolfer.aspx.vb" Inherits="Golfer" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-    Golfer
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <asp:SqlDataSource ID="sqlGolfer" runat="server" ConnectionString="<%$ ConnectionStrings:db_golfers %>" DeleteCommand="DELETE FROM [arimyers_hw07] WHERE [golferID] = @golferID" InsertCommand="INSERT INTO [arimyers_hw07] ([firstName], [lastName], [age], [birthplace], [weight], [country], [debut], [swings]) VALUES (@firstName, @lastName, @age, @birthplace, @weight, @country, @debut, @swings)" SelectCommand="SELECT * FROM [arimyers_hw07] WHERE ([golferID] = @golferID)" UpdateCommand="UPDATE [arimyers_hw07] SET [firstName] = @firstName, [lastName] = @lastName, [age] = @age, [birthplace] = @birthplace, [weight] = @weight, [country] = @country, [debut] = @debut, [swings] = @swings WHERE [golferID] = @golferID">
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title><link href="HW7SS.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+    <div class="header">
+        
+        <h1 style="color: #FFFFFF; font-family: 'Eras Bold ITC'; text-decoration: underline;">Aric&#39;s Golfer Info</h1>
+        <h3 style="color: #FFFFFF">The one stop shop for basic golfer knowledge!</h3>
+        <h2 style="color: #FFFFFF"><a href="Default.aspx" style="color: #FFFFFF">Home</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+            <a href="AddGolfer.aspx" style="color: #FFFFFF">Add Golfer</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+            <a href="AboutUs.aspx" style="color: #FFFFFF">About Us</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+            <a href="Contact.aspx" style="color: #FFFFFF">Contact</a></h2>
+        
+    
+    </div>
+    <div>
+
+        <asp:SqlDataSource ID="sqlGolfer" runat="server" ConnectionString="<%$ ConnectionStrings:db_golfers %>" DeleteCommand="DELETE FROM [arimyers_hw07] WHERE [golferID] = @golferID" InsertCommand="INSERT INTO [arimyers_hw07] ([firstName], [lastName], [age], [birthplace], [weight], [country], [debut], [swings]) VALUES (@firstName, @lastName, @age, @birthplace, @weight, @country, @debut, @swings)" SelectCommand="SELECT * FROM [arimyers_hw07] WHERE ([golferID] = @golferID)" UpdateCommand="UPDATE [arimyers_hw07] SET [firstName] = @firstName, [lastName] = @lastName, [age] = @age, [birthplace] = @birthplace, [weight] = @weight, [country] = @country, [debut] = @debut, [swings] = @swings WHERE [golferID] = @golferID">
             <DeleteParameters>
                 <asp:Parameter Name="golferID" Type="Int32" />
             </DeleteParameters>
@@ -43,11 +60,14 @@
                 <asp:BoundField DataField="country" HeaderText="Country" SortExpression="country" />
                 <asp:BoundField DataField="debut" HeaderText="Debut" SortExpression="debut" />
                 <asp:BoundField DataField="swings" HeaderText="Swings" SortExpression="swings" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True">
-                <ControlStyle ForeColor="White" />
-                </asp:CommandField>
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Fields>
             <FooterStyle BackColor="Black" />
         </asp:DetailsView>
-</asp:Content>
 
+        <asp:Label ID="lblDel" runat="server" Text="Label"></asp:Label>
+
+    </div>
+    </form>
+</body>
+</html>

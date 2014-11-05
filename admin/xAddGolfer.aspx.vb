@@ -1,6 +1,7 @@
 ﻿
-Partial Class admin_AddGolfer
+Partial Class AddGolfer
     Inherits System.Web.UI.Page
+
     Protected Sub Page_Load(sender As Object, e As EventArgs) Handles Me.Load
         fvAddGolfer.Focus()
     End Sub

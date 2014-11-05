@@ -1,0 +1,36 @@
+﻿<%@ Master Language="VB" CodeFile="Golf.master.vb" Inherits="Golf" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title><link href="HW7SS.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="body">
+    
+    <form id="form1" runat="server">
+    <div class="center">
+        <div class="header">
+        
+            <h1 style="color: #FFFFFF; font-family: 'Eras Bold ITC'; text-decoration: underline;">Aric&#39;s Golfer Info</h1>
+            <h3 style="color: #FFFFFF">The one stop shop for basic golfer knowledge!</h3>
+            <h2 style="color: #FFFFFF"><a href="Default.aspx" style="color: #FFFFFF">Home</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+                <a href="AddGolfer.aspx" style="color: #FFFFFF">Add Golfer</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+                <a href="AboutUs.aspx" style="color: #FFFFFF">About Us</a>&nbsp;&nbsp; |&nbsp;&nbsp; 
+                <a href="Contact.aspx" style="color: #FFFFFF">Contact</a></h2>
+        
+    
+        </div>
+        <div>
+             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer"> &copy; 2014 MSCI:3300 - Software Design & Development - Aric Myers </div>
+    </div>
+    </form>
+</body>
+</html>
