@@ -17,6 +17,9 @@
         
             <h1 style="color: #FFFFFF; font-family: 'Eras Bold ITC'; text-decoration: underline;">Aric&#39;s Golfer Info</h1>
             <asp:Image ID="logo" runat="server" Height="70px" ImageUrl="~/pictures/golfball.jpg" />
+            <br />
+            <h5 style="color: #FFFFFF">Todays Date is:  
+            <asp:Label ID="Label1" runat="server" ForeColor="White" style="font-size: small"></asp:Label></h5>
             <h5 style="color: #FFFFFF">The one stop shop for basic golfer knowledge!</h5>
             <h4 style="color: #FFFFFF">
                 <asp:HyperLink ID="link_home" runat="server" ForeColor="White" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
@@ -24,7 +27,8 @@
                 <asp:HyperLink ID="link_AboutUs" runat="server" ForeColor="White" NavigateUrl="~/AboutUs.aspx">About Us</asp:HyperLink>&nbsp;&nbsp; |&nbsp;&nbsp; 
                 <asp:HyperLink ID="link_Contact" runat="server" ForeColor="White" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>&nbsp;&nbsp; |&nbsp;
                 <asp:HyperLink ID="link_Admin" runat="server" ForeColor="White" NavigateUrl="~/login/login.aspx">Admin</asp:HyperLink>&nbsp; |&nbsp;
-                <asp:LoginStatus ID="LoginStatus1" runat="server" ForeColor="White" LogoutPageUrl="~/Default.aspx" />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" ForeColor="White" LogoutPageUrl="~/Default.aspx" />&nbsp; |&nbsp;
+                <asp:HyperLink ID="link_Search" runat="server" ForeColor="White" NavigateUrl="~/Search.aspx">Search</asp:HyperLink>
             </h4>
     
         </div>

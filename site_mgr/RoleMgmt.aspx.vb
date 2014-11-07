@@ -179,7 +179,7 @@ Partial Class Account_AddRole
         Dim selectedRole As String = list_allRoles.SelectedItem.Text
         Dim sqlStmt As String = queryString & "'" & selectedRole & "'"
 
-        Dim connectionString As String = ConfigurationManager.ConnectionStrings("db_stateFacts").ConnectionString
+        Dim connectionString As String = ConfigurationManager.ConnectionStrings("db_golfers").ConnectionString
 
         Dim da As SqlDataAdapter = New SqlDataAdapter(sqlStmt, connectionString)
         Dim ds As New DataSet

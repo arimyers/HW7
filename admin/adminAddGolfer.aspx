@@ -109,6 +109,8 @@
                         </td>
                     </tr>
                 </table>
+                <br />
+                <asp:RequiredFieldValidator ID="rfv1" runat="server" ErrorMessage="Please enter a last name!" ControlToValidate="lastNameTextBox"></asp:RequiredFieldValidator>
 
                 
                 
